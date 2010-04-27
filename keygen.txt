@@ -1,0 +1,30 @@
+## key type must be first parameter
+Key-Type: DSA
+
+## Key-Usage: encrypt|sign|auth
+Key-Usage: sign
+
+## short keys for testing (512).
+## change to higher values for production use, e.g. Key-Length: 2048 and Subkey-Length: 1024
+Key-Length: 512
+Subkey-Type: ELG-E
+Subkey-Length: 512
+
+Name-Real: Automated Signature Service [SIS/EXAMPLE]
+Name-Comment: http://sis.example.com/
+Name-Email: sis-example@example.com
+
+## Expire-Date: <iso-date>|(<number>[d|w|m|y])
+Expire-Date: 2y
+
+## Preferences: ??
+#Passphrase: @PASSPHRASE@
+
+%pubring gnupg/pubring.gpg
+%secring gnupg/secring.gpg
+
+%echo key generation.
+#%dry-run
+%commit
+%echo done.
+
