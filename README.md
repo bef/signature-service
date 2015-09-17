@@ -1,0 +1,1 @@
+The signature service provides an automated process to cryptographically sign user input. The project consists of protocol specifications and simple implementations of a time stamped PGP signature service.
